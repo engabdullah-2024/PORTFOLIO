@@ -247,7 +247,7 @@ const Portfolio = () => {
 
           {/* Right Section (Image/Illustration) */}
           <div className="flex justify-center lg:justify-end mr-10 animate-slideInRight">
-            <img className='w-80 h-auto max-w-full' src='images/iltire.jpg' alt="Illustration" />
+            <img className='w-80 h-auto max-w-full' src='iltire.jpg' alt="Illustration" />
           </div>
         </div>
       </div>

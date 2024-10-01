@@ -34,7 +34,7 @@ const About = () => {
 
         {/* Right Section (Image/Illustration) */}
         <div className="flex justify-center lg:justify-end animate-slideInRight">
-        <img  className='w-80 h-auto max-w-full'  src='images/iltire.jpg'></img>
+        <img  className='w-80 h-auto max-w-full'  src='iltire.jpg'></img>
         </div>
 
         {/* Decorative Shapes (Removed) */}
