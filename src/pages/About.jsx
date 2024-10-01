@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import iltire from '../images/iltire.jpg';
+import { Link } from 'react-router-dom';
 
 
 const About = () => {
@@ -28,9 +29,10 @@ const About = () => {
           <p className="text-lg max-w-lg mb-8">
             I believe in continuous learning and staying updated with the latest trends in technology. In my spare time, I love to explore new tools and frameworks, as well as contribute to open-source projects.
           </p>
-          <button className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all duration-300">
-            View My Work →
-          </button>
+         
+           
+          <Link to="/">  <h1 className='bg-orange-500 text-white px-6 py-3 rounded-lg w-[200px] hover:bg-orange-600 transition-all duration-300'> View My Work →</h1></Link>
+         
         </div>
 
         {/* Right Section (Image/Illustration) */}
