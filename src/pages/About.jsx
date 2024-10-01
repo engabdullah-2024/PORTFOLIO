@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import iltire from '../images/iltire.jpg';
 
 
 const About = () => {
@@ -34,7 +35,11 @@ const About = () => {
 
         {/* Right Section (Image/Illustration) */}
         <div className="flex justify-center lg:justify-end animate-slideInRight">
-        <img  className='w-80 h-auto max-w-full'  src='iltire.jpg'></img>
+        <img 
+        className='w-80 h-auto max-w-full' 
+        src={iltire} 
+        alt="Illustration" 
+      />
         </div>
 
         {/* Decorative Shapes (Removed) */}

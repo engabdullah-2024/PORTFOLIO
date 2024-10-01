@@ -142,6 +142,7 @@
 
 // export default Portfolio;
 import React, { useEffect, useState } from 'react';
+import iltire from '../images/iltire.jpg';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa'; // Import star icons
@@ -247,7 +248,11 @@ const Portfolio = () => {
 
           {/* Right Section (Image/Illustration) */}
           <div className="flex justify-center lg:justify-end mr-10 animate-slideInRight">
-            <img className='w-80 h-auto max-w-full' src='iltire.jpg' alt="Illustration" />
+          <img 
+        className='w-80 h-auto max-w-full' 
+        src={iltire} 
+        alt="Illustration" 
+      />
           </div>
         </div>
       </div>
