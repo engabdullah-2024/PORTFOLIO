@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const About = () => {
+  
   return (
     <div>
 <Header/>
@@ -38,10 +39,11 @@ const About = () => {
         {/* Right Section (Image/Illustration) */}
         <div className="flex justify-center lg:justify-end animate-slideInRight">
         <img 
-        className='w-80 h-auto max-w-full' 
-        src={iltire} 
-        alt="Illustration" 
-      />
+  className="w-80 h-80 max-w-full transition-transform transform hover:scale-105 hover:rotate-3 hover:shadow-lg duration-300 rounded-full border-2 border-orange-500" 
+  src={iltire} 
+  alt="Illustration" 
+/>
+
         </div>
 
         {/* Decorative Shapes (Removed) */}

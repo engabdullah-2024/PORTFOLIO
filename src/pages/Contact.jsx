@@ -27,6 +27,7 @@ const ContactUs = () => {
     e.preventDefault(); // Prevent default form submission behavior
     // Here you can implement the logic to send data to your server
     console.log('Form submitted:', formData);
+    
 
     // Reset the form after submission (optional)
     setFormData({
