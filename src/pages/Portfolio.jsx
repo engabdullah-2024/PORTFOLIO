@@ -144,7 +144,7 @@ const Portfolio = () => {
               />
               {/* Conditionally render the blue div with text */}
               {isTextVisible && (
-                <div className="absolute inset-0 flex items-center justify-center bg-blue-500 rounded-[12px] text-white text-xl">
+                <div className="absolute inset-0 flex items-center justify-center bg-orange-500 rounded-[12px] text-white text-xl">
                   Fullstack Dev
                 </div>
               )}
