@@ -43,6 +43,8 @@ const Portfolio = () => {
   const [displayedPercent, setDisplayedPercent] = useState(skills.map(() => 0));
   const [countingDone, setCountingDone] = useState(false);
 
+  const [isTextVisible, setIsTextVisible] = useState(false); // New state to control text visibility
+
   useEffect(() => {
     if (!countingDone) {
       setProgress(skills.map(skill => skill.level));
@@ -89,6 +91,10 @@ const Portfolio = () => {
     return stars;
   };
 
+  const handleImageClick = () => {
+    setIsTextVisible(!isTextVisible); // Toggle text visibility on image click
+  };
+
   return (
     <div>
       <Header />
@@ -127,12 +133,22 @@ const Portfolio = () => {
 
           {/* Right Section (Image/Illustration) */}
           <div className="flex justify-center lg:justify-end mr-10 animate-slideInRight">
-          <img 
-  className="w-80 h-80 max-w-full transition-transform transform hover:scale-105 hover:rotate-3 hover:shadow-lg duration-300 rounded-full border-2 border-orange-500" 
-  src={iltire} 
-  alt="Illustration" 
-/>
-
+            <div 
+              className="relative" 
+              onClick={handleImageClick} // Added click handler
+            >
+              <img 
+                className="w-80 h-80 max-w-full rounded-[12px] border-2 border-orange-500" 
+                src={iltire} 
+                alt="Illustration" 
+              />
+              {/* Conditionally render the blue div with text */}
+              {isTextVisible && (
+                <div className="absolute inset-0 flex items-center justify-center bg-blue-500 rounded-[12px] text-white text-xl">
+                  Fullstack Dev
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
