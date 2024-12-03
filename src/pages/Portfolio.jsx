@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import iltire from '../images/iltire.jpg';
+import me from '../images/me.jpg';
 import Header from '../components/Header';
-import { FaStar, FaStarHalfAlt, FaGithub } from 'react-icons/fa'; // Removed FaExternalLinkAlt import
+import { FaStar, FaStarHalfAlt, FaGithub, FaWhatsapp } from 'react-icons/fa'; // Import FaWhatsapp
 import Footer from '../components/Footer';
 
 const Portfolio = () => {
@@ -22,8 +22,8 @@ const Portfolio = () => {
   // Project data
   const projects = [
     {
-      title: ' Eco Market',
-      description: ' is an e-commerce platform built with React JS and styled using Tailwind CSS, offering users a seamless shopping experience in a modern and responsive environment.',
+      title: 'Eco Market',
+      description: 'is an e-commerce platform built with React JS and styled using Tailwind CSS, offering users a seamless shopping experience in a modern and responsive environment.',
       github: 'https://eco-market-psi.vercel.app/',
     },
     {
@@ -33,8 +33,18 @@ const Portfolio = () => {
     },
     {
       title: 'Som Calculator',
-      description: ' This calculator provides users with a simple, intuitive interface to perform calculations efficiently while ensuring a responsive and visually appealing layout.',
+      description: 'This calculator provides users with a simple, intuitive interface to perform calculations efficiently while ensuring a responsive and visually appealing layout.',
       github: 'https://calculator-app-chi-vert.vercel.app/',
+    },
+    {
+      title: 'Weather App',
+      description: 'I built a weather app on react js.',
+      github: 'https://weather-app-six-theta-79.vercel.app//',
+    },
+    {
+      title: 'BMI Calculaor',
+      description: 'BMI Calculator that calculates the body.',
+      github: 'https://engabdullah-2024.github.io/BMI-Calculator/',
     }
   ];
 
@@ -91,8 +101,12 @@ const Portfolio = () => {
     return stars;
   };
 
-  const handleImageClick = () => {
-    setIsTextVisible(!isTextVisible); // Toggle text visibility on image click
+  const handleMouseEnter = () => {
+    setIsTextVisible(true); // Show text when mouse enters
+  };
+
+  const handleMouseLeave = () => {
+    setIsTextVisible(false); // Hide text when mouse leaves
   };
 
   return (
@@ -135,17 +149,21 @@ const Portfolio = () => {
           <div className="flex justify-center lg:justify-end mr-10 animate-slideInRight">
             <div 
               className="relative" 
-              onClick={handleImageClick} // Added click handler
+              onMouseEnter={handleMouseEnter} // Trigger text visibility on mouse enter
+              onMouseLeave={handleMouseLeave} // Trigger text disappearance on mouse leave
             >
               <img 
                 className="w-80 h-80 max-w-full rounded-[12px] border-2 border-orange-500" 
-                src={iltire} 
+                src={me} 
                 alt="Illustration" 
+                
               />
               {/* Conditionally render the blue div with text */}
               {isTextVisible && (
                 <div className="absolute inset-0 flex items-center justify-center bg-orange-500 rounded-[12px] text-white text-xl">
-                  Fullstack Dev
+                <h1>  Fullstack Dev</h1>
+                /
+                    <h1>  Designer</h1>
                 </div>
               )}
             </div>
@@ -192,24 +210,32 @@ const Portfolio = () => {
                 className="w-full sm:w-1/2 lg:w-1/3 p-4 transition-transform transform hover:scale-105 duration-300"
               >
                 <div className="bg-gray-800 p-4 rounded-lg">
-                  <h3 className="text-xl font-semibold text-white mb-4">{project.title}</h3>
-                  <p className="text-gray-400 mb-4">{project.description}</p>
-                  <div className="flex justify-center mt-4">
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-400 flex items-center space-x-2"
-                    >
-                      <FaGithub /> <span>GitHub</span>
-                    </a>
-                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-purple-500 hover:underline"
+                  >
+                    View on GitHub
+                  </a>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* WhatsApp Floating Icon */}
+      <a 
+        href="https://wa.me/252613169435" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-10 right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600"
+      >
+        <FaWhatsapp size={40} />
+      </a>
 
       <Footer />
     </div>
