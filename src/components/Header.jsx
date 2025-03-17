@@ -34,6 +34,9 @@ const Header = () => {
             <Link to="/contact">
               <li className="hover:text-gray-300">Contact</li>
             </Link>
+            <Link to="/branding">
+              <li className="hover:text-gray-300">Branding</li>
+            </Link>
           </ul>
         </nav>
 
@@ -54,6 +57,9 @@ const Header = () => {
             </Link>
             <Link to="/contact" onClick={toggleMenu}>
               <li className="hover:text-gray-400">Contact</li>
+            </Link>
+            <Link to="/branding" onClick={toggleMenu}>
+              <li className="hover:text-gray-400">Branding</li>
             </Link>
           </motion.ul>
         )}
