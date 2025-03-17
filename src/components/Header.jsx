@@ -96,6 +96,9 @@ const Header = () => {
               <Link to="/contact" onClick={toggleMenu}>
                 <li className="hover:text-gray-400">Contact</li>
               </Link>
+              <Link to="/branding" onClick={toggleMenu}>
+                <li className="hover:text-gray-400">Branding</li>
+              </Link>
             </motion.ul>
           </div>
         </div>
