@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import aniga from '../images/aniga.jpg';
+import abdalla from '../images/abdalla.jpg';
 import { Link } from 'react-router-dom';
 
 
@@ -40,7 +40,7 @@ const About = () => {
         <div className="flex justify-center lg:justify-end animate-slideInRight">
         <img 
   className="w-80 h-80 max-w-full transition-transform transform hover:scale-105 hover:rotate-3 hover:shadow-lg duration-300 rounded-full border-2 border-orange-500" 
-  src={aniga} 
+  src={abdalla} 
   alt="Illustration" 
 />
 

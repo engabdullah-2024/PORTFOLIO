@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import aniga from '../images/aniga.jpg';
+import abdalla from '../images/abdalla.jpg'
 import Header from '../components/Header';
 import { FaStar, FaStarHalfAlt, FaGithub, FaWhatsapp } from 'react-icons/fa'; // Import FaWhatsapp
 import Footer from '../components/Footer';
@@ -180,7 +180,7 @@ const Portfolio = () => {
                 >
                   <img 
                     className="w-80 h-80 max-w-full rounded-[12px] border-2 border-orange-500" 
-                    src={aniga} 
+                    src={abdalla}
                     alt="Illustration" 
                     
                   />
